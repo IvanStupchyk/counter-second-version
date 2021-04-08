@@ -1,0 +1,10 @@
+.btn_container {
+    height: 60px;
+    width: 100%;
+    border: 2px solid #03c1c1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

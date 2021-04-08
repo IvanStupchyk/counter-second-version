@@ -1,0 +1,9 @@
+.counter_container {
+    margin: 20px;
+    min-height: 220px;
+    min-width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #03c1c1;
+    border-radius: 5px;
+}
