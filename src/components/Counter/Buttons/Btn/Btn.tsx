@@ -6,7 +6,7 @@ type BtnPropsType = {
     setValues?: () => void
     resetCounter?: () => void
     counter?: number
-    btn: "inc" | "reset" | "set"
+    btn: 'inc' | 'reset' | 'set'
     maxValue: number
     minValue: number
     showSettings: boolean
@@ -15,15 +15,11 @@ type BtnPropsType = {
 }
 
 export const Btn = (props: BtnPropsType) => {
-    const disabledBtn = props.btn === "inc" && props.counter === props.maxValue || props.errorCondition
+    const disabledBtn = props.btn === 'inc' && props.counter === props.maxValue || props.errorCondition
 
-    const increaseCounter = () => {
-        props.increaseCounter && props.increaseCounter()
-    }
+    const increaseCounter = () => props.increaseCounter && props.increaseCounter()
 
-    const resetCounter = () => {
-        props.resetCounter && props.resetCounter()
-    }
+    const resetCounter = () => props.resetCounter && props.resetCounter()
 
     const setValues = () => {
         props.changeSettingsScreen && props.changeSettingsScreen(!props.showSettings)
@@ -38,13 +34,13 @@ export const Btn = (props: BtnPropsType) => {
 
     const kindBtn = () => {
         switch (props.btn) {
-            case "inc":
+            case 'inc':
                 increaseCounter()
                 break
-            case "reset":
+            case 'reset':
                 resetCounter()
                 break
-            case "set":
+            case 'set':
                 setValues()
                 break
         }

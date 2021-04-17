@@ -13,31 +13,19 @@ function App() {
 
     const [counter, setCounter] = useState<number>(minValue)
 
-    const increaseCounter = () => {
-        counter < maxValue && setCounter(prev => prev + 1)
-    }
+    const increaseCounter = () => counter < maxValue && setCounter(prev => prev + 1)
 
     const errorCondition = (minValue >= maxValue) || minValue < 0 || maxValue < 0
 
-    const resetCounter = () => {
-        setCounter(minValue)
-    }
+    const resetCounter = () => setCounter(minValue)
 
-    const changeMaxValue = (value: string) => {
-        setMaxValue(+value)
-    }
+    const changeMaxValue = (value: string) => setMaxValue(+value)
 
-    const changeMinValue = (value: string) => {
-        setMinValue(+value)
-    }
+    const changeMinValue = (value: string) => setMinValue(+value)
 
-    const setValues = () => {
-        setCounter(minValue)
-    }
+    const setValues = () => setCounter(minValue)
 
-    const changeSettingsScreen = (value: boolean) => {
-        setShowSettings(value)
-    }
+    const changeSettingsScreen = (value: boolean) => setShowSettings(value)
 
     return (
         <div className="App">
